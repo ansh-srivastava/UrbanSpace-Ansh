@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pars Coder || Add To Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <!-- content of website -->
+    <div class="container">
+        <header>
+            <a href="#" class="logo"><img src="img/logo.png" alt="">coffee</a>
+            <ul class="navlist">
+                <li class="links"><a href="#" class="items">Home</a></li>
+                <li class="links"><a href="#" class="items active">Our Products</a></li>
+                <li class="links"><a href="#" class="items">Delivery</a></li>
+            </ul>
+
+            <div class="right-side">
+                <div class="searchBox"><i class='bx bx-search'></i>
+                <input type="text">
+                </div>
+
+                    <a href="#" class="shopping-cart-icon">
+                        <span class="quantity">0</span>
+                        <i class='bx bx-shopping-bag' ></i>
+                    </a>
+
+                    <div class="bx bx-menu" id="menu-icon"></div>
+
+            </div>
+        </header>
+
+        <div class="list"></div>
+
+    </div>
+
+
+    <!-- content of cart  -->
+    <div class="cart">
+        <h2 class="cart-title">
+            New Order
+        </h2>
+
+        <p class="date">Monday , June 28 2023</p>
+
+        <div class="listCart"></div>
+
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+        </div>
+
+        <button type="button" class="btn-buy">Countinue to payment</button>
+    
+        <i class='bx bx-x' id="cart-close"></i>
+    </div>
+    <!-- content of cart  -->
+
+    <script src="script.js"></script>
+</body>
+</html>

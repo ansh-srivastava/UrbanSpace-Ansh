@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, inital-scale=1.0">
+		<title>Urban Clap - Appliances sales and services</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+		<link rel="stylesheet" href="service.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #cart-dropdown {
+				position: relative;
+				display: inline-block;
+				cursor: pointer;
+			}
+
+			.cart-dropdown-content {
+				display: none;
+				position: absolute;
+				min-width: 160px;
+				box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+				background-color: #000;
+				z-index: 1;
+				padding: 8px;
+				border-radius: 4px;
+			}
+
+			#cart-dropdown:hover .cart-dropdown-content {
+				display: grid;
+                color: aliceblue;
+                font-size: 20px;
+                margin: 15px;
+			}
+
+			.cart-item {
+				margin-bottom: 20px;
+			}
+
+			.cart-item span {
+				display: inline-block;
+				margin-right: 8px;
+			}
+
+			.checkout-button {
+				margin-top: 8px;
+				width: 130px;
+				text-decoration: none;
+				line-height: 35px;
+				display: inline-block;
+				background-color: #088178;
+				font-weight: medium;
+				color: #000;
+				text-align: center;
+				vertical-align: middle;
+				user-select: none;
+				border: 1px solid transparent;
+				font-size: 14px;
+				opacity: 1;
+			}
+
+        </style>
+	</head>
+    <body> 
+        <section id="header">
+			<a href="index.html"><img src="img/logo.png" class="logo" alt=""></a>
+			<div>
+				<ul id="navbar">
+					<li><a href="index.html">Home</a></li>
+					<li><a class="active" href="service.html">Service</a></li>
+					<li><a href="About.html">about</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+					<li>
+                        <div id="cart-dropdown">
+                            <a href="#" id="cart-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span id="cart-count" class="cart-count"></span>
+                            </a>
+                            <div class="cart-dropdown-content" id="cart-dropdown-content"></div>
+                      </div>
+                    </li>
+                    <li><a href="Login.html">Login</a></li>
+                </ul>
+			</div>
+		</section>
+        <section>
+            <div class="table-container">
+                <h2 class="heading">Washing Machine Service and Repair</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Services</th>
+                            <th>Price (INR)</th> 
+                            <th>Cart</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Start-Date">Fully Automatic (Top Load) Checkup</td>
+                            <td data-label="Start / End Time">₹1000</td>
+                            <td data-label="#"><button class="btn add-to-cart" data-item="Fully Automatic (Top Load) Checkup" data-price="1000">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Fully Automatic (Front Load) Checkup</td>
+                            <td data-label="Start / End Time">₹1500</td>
+                            <td data-label="#"><button class="btn add-to-cart" data-item="Fully Automatic (Front Load) Checkup" data-price="1500">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Semi Automatic Checkup</td>
+                            <td data-label="Start / End Time">₹800</td>
+                            <td data-label="#"><button class="btn add-to-cart" data-item="Semi Automatic Checkup" data-price="800">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Washing Machine Installation</td>
+                            <td data-label="Start / End Time">₹1500</td>
+                            <td data-label="#"><button class="btn add-to-cart" data-item="Washing Machine Installation" data-price="1500">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Washing Machine Uninstallation</td>
+                            <td data-label="Start / End Time">₹1000</td>
+                            <td data-label="#"><button class="btn add-to-cart" data-item="Washing Machine Uninstallation" data-price="1000">Add-To-Service</button></td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <div class="table-container">
+                <h2 class="heading">Refrigerator Service and Repair</h2>
+                <h4 class="subheading">Double Door</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Services</th>
+                            <th>Price (INR)</th> 
+                            <th>Add to Servicet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Start-Date">Checkup</td>
+                            <td data-label="Start / End Time">₹500</td>
+                            <td data-label="#"><button class="btn add-to-cart" data-item="Double Door Refrigerator Checkup" data-price="500">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Gas refill</td>
+                            <td data-label="Start / End Time">₹1200</td>
+                            <td data-label="#"><button class="btn add-to-cart" data-item="Double Door Refrigerator Gas refill" data-price="1200">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Compressor replacement</td>
+                            <td data-label="Start / End Time">₹3500</td>
+                            <td data-label="#"><button class="btn add-to-cart" data-item="Double Door Refrigerator Compressor replacement" data-price="3500">Add-To-Service</button></td>
+                        </tr> 
+                    </tbody>
+                </table>
+                <h4 class="subheading-2">Side By Side</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Services</th>
+                            <th>Price (INR)</th> 
+                            <th>Add to Service</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Start-Date">Checkup</td>
+                            <td data-label="Start / End Time">₹700</td>
+                            <td data-label="#"><button class="btn add-to-cart" data-item="Side By Side Refrigerator Checkup" >Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Gas refill</td>
+                            <td data-label="Start / End Time">₹1800</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Compressor replacement</td>
+                            <td data-label="Start / End Time">₹5000</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr> 
+                    </tbody>
+                </table>
+                <h4 class="subheading-2">Single Door</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Services</th>
+                            <th>Price (INR)</th> 
+                            <th>Add to Service</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Start-Date">Checkup</td>
+                            <td data-label="Start / End Time">₹400</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Gas refill</td>
+                            <td data-label="Start / End Time">₹1000</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Compressor replacement</td>
+                            <td data-label="Start / End Time">₹3000</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <div class="table-container">
+                <h2 class="heading">Water Purifier Service and Repair</h2>
+                <h4 class="subheading">Service</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Services</th>
+                            <th>Price (INR)</th> 
+                            <th>Add to Service</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Start-Date">Annual Maintenance Contract</td>
+                            <td data-label="Start / End Time">₹1500</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Filter Replacement</td>
+                            <td data-label="Start / End Time">₹500</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Water Leakage Fixing</td>
+                            <td data-label="Start / End Time">₹1000</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr> 
+                    </tbody>
+                </table>
+                <h4 class="subheading-2">Repair</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Services</th>
+                            <th>Price (INR)</th> 
+                            <th>Add to Service</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Start-Date">RO Pump Repair</td>
+                            <td data-label="Start / End Time">₹1500</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Membrane Replacement</td>
+                            <td data-label="Start / End Time">₹2000</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">UV Lamp Replacement</td>
+                            <td data-label="Start / End Time">₹500</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr> 
+                        <tr>
+                            <td data-label="Start-Date">Water Level Sensor Repair</td>
+                            <td data-label="Start / End Time">₹1000</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <div class="table-container">
+                <h2 class="heading">TV Repair Services</h2>
+                <h4 class="subheading">TV Repair</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Services</th>
+                            <th>Price (INR)</th> 
+                            <th>Add to Service</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Start-Date">Screen replacement</td>
+                            <td data-label="Start / End Time">₹5000</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Motherboard replacement</td>
+                            <td data-label="Start / End Time">₹4000</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Speaker replacement</td>
+                            <td data-label="Start / End Time">₹1500</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr> 
+                    </tbody>
+                </table>
+                <h4 class="subheading-2">TV Installation</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Services</th>
+                            <th>Price (INR)</th> 
+                            <th>Add to Service</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Start-Date">Wall mounting</td>
+                            <td data-label="Start / End Time">₹800</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Table-top setup</td>
+                            <td data-label="Start / End Time">₹500</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr> 
+                    </tbody>
+                </table>
+                <h4 class="subheading-2">TV Uninstallation</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Services</th>
+                            <th>Price (INR)</th> 
+                            <th>Add to Service</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Start-Date">Wall uninstallation of TV</td>
+                            <td data-label="Start / End Time">₹300</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Start-Date">Tabletop uninstallation of TV</td>
+                            <td data-label="Start / End Time">₹200</td>
+                            <td data-label="#"><button class="btn">Add-To-Service</button></td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        </section>
+        <script src="service.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+				const cartIcon = document.getElementById('cart-icon');
+				const cartCount = document.getElementById('cart-count');
+				const cartDropdownContent = document.getElementById('cart-dropdown-content');
+				const addToCartButtons = document.getElementsByClassName('add-to-cart');
+                const removeCartItemButtons = document.getElementsByClassName('remove-from-cart');
+
+				let cartItems = [];
+
+				function updateCartCount() {
+					cartCount.textContent = cartItems.length;
+				}
+
+				function addToCart(item, price) {
+					cartItems.push({ item, price });
+					updateCartCount();
+				}
+                function removeFromCart(index) {
+                    cartItems.splice(index, 1);
+                    updateCartCount();
+                    createCartDropdown();
+                }
+
+
+				function createCartDropdown() {
+					cartDropdownContent.innerHTML = ''; // Clear previous content
+
+					cartItems.forEach((cartItem) => {
+						const cartItemDiv = document.createElement('div');
+						cartItemDiv.classList.add('cart-item');
+
+						const itemName = document.createElement('span');
+						itemName.textContent = cartItem.item;
+
+						const itemPrice = document.createElement('span');
+						itemPrice.textContent = '₹' + cartItem.price;
+
+                        const removeButton = document.createElement('button');
+                        removeButton.classList.add('btn', 'remove-from-cart');
+                        removeButton.textContent = 'Remove';
+                        removeButton.addEventListener('click', function() {
+                            removeFromCart(cartItems.indexOf(cartItem));
+                        });
+
+						cartItemDiv.appendChild(itemName);
+						cartItemDiv.appendChild(itemPrice);
+                        cartItemDiv.appendChild(removeButton);
+
+						cartDropdownContent.appendChild(cartItemDiv);
+					});
+
+					if (cartItems.length === 0) {
+						const emptyCartMessage = document.createElement('div');
+						emptyCartMessage.textContent = 'Your cart is empty.';
+						cartDropdownContent.appendChild(emptyCartMessage);
+					}
+
+					const checkoutButton = document.createElement('button');
+					checkoutButton.classList.add('btn', 'checkout-button');
+					checkoutButton.textContent = 'Checkout';
+					cartDropdownContent.appendChild(checkoutButton);
+				}
+
+				function handleAddToCartClick(event) {
+					const button = event.target;
+					const item = button.getAttribute('data-item');
+					const price = button.getAttribute('data-price');
+
+					addToCart(item, price);
+					createCartDropdown();
+				}
+
+				for (let i = 0; i < addToCartButtons.length; i++) {
+					addToCartButtons[i].addEventListener('click', handleAddToCartClick);
+				}
+
+				cartIcon.addEventListener('click', function() {
+					if (cartItems.length > 0) {
+						cartDropdownContent.classList.toggle('show');
+					}
+				});
+
+				window.addEventListener('click', function(event) {
+                    if (
+                        !event.target.matches('#cart-icon') && !event.target.closest('.cart-dropdown-content')
+                    ) {
+                        cartDropdownContent.classList.remove('show');
+                    }
+                });
+			});
+        </script>
+        <!--<script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const cartIcon = document.getElementById('cart-icon');
+                const cartCount = document.getElementById('cart-count');
+                const cartDropdownContent = document.getElementById('cart-dropdown-content');
+                const addToCartButtons = document.getElementsByClassName('add-to-cart');
+                const removeCartItemButtons = document.getElementsByClassName('remove-from-cart');
+                let cartItems = [];
+                function updateCartCount() {
+                    cartCount.textContent = cartItems.length;
+                }
+                function addToCart(item, price) {
+                    cartItems.push({ item, price });
+                    updateCartCount();
+                }
+                function removeFromCart(index) {
+                    cartItems.splice(index, 1);
+                    updateCartCount();
+                    createCartDropdown();
+                }
+                function createCartDropdown() {
+                    cartDropdownContent.innerHTML = ''; // Clear previous content
+                    cartItems.forEach((cartItem, index) => {
+                        const cartItemDiv = document.createElement('div');
+                        cartItemDiv.classList.add('cart-item');
+                        const itemName = document.createElement('span');
+                        itemName.textContent = cartItem.item;
+                        const itemPrice = document.createElement('span');
+                        itemPrice.textContent = '₹' + cartItem.price;
+                        const removeButton = document.createElement('button');
+                        removeButton.classList.add('btn', 'remove-from-cart');
+                        removeButton.textContent = 'Remove';
+                        removeButton.addEventListener('click', function() {
+                            removeFromCart(index);
+                        }); 
+                        cartItemDiv.appendChild(itemName);
+                        cartItemDiv.appendChild(itemPrice);
+                        cartItemDiv.appendChild(removeButton);
+                        cartDropdownContent.appendChild(cartItemDiv);
+                    });
+                    if (cartItems.length === 0) {
+                        const emptyCartMessage = document.createElement('div');
+                        emptyCartMessage.textContent = 'Your cart is empty.';
+                        cartDropdownContent.appendChild(emptyCartMessage);
+                    }
+                    const checkoutButton = document.createElement('button');
+                    checkoutButton.classList.add('btn', 'checkout-button');
+                    checkoutButton.textContent = 'Checkout';
+                    cartDropdownContent.appendChild(checkoutButton);
+                }
+                function handleAddToCartClick(event) {
+                    const button = event.target;
+                    const item = button.getAttribute('data-item');
+                    const price = button.getAttribute('data-price');
+                    addToCart(item, price);
+                    createCartDropdown();
+                }
+                for (let i = 0; i < addToCartButtons.length; i++) {
+                    addToCartButtons[i].addEventListener('click', handleAddToCartClick);
+                }
+                cartIcon.addEventListener('click', function() {
+                    if (cartItems.length > 0) {
+                        cartDropdownContent.classList.toggle('show');
+                    }
+                });
+                window.addEventListener('click', function(event) {
+                    if (!event.target.matches('#cart-dropdown')) {
+                        cartDropdownContent.classList.remove('show');
+                    }
+                });
+            });
+        </script> -->
+
+        </script>
+    </body>
+</html>
